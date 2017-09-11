@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/profile.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar menu -->
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">OnlineU</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse" aria-expanded="true">  
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Catalog</a></li>
+                            <li class="active"><a href="#profile">Profile</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li> <a href="#">Logout</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- input area -->
+            <h1>Profile</h1>
+            <hr />
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <lable class="col-sm-2 control-label" for="first-name">First Name</lable>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lable class="col-sm-2 control-label" for="last-name">Last Name</lable>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lable class="col-sm-2 control-label" for="email">Email</lable>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <lable class="col-sm-2 control-label" for="password">Password</lable>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="password" id="password" placeholder="Password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </form>
+            <!-- table to hold classes -->
+            <h2>Courses Created</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Created</th>
+                        <th>
+                            <button type="button" class="btn btn-success pull-right" id="addClass">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="classes">
+                    <tr class="template">
+                        <td class="name"></td>
+                        <td class="category"></td>
+                        <td class="date"></td>
+                        <td>
+                            <button type="button" class="btn btn-danger pull-right remove">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-primary pull-right edit">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <!-- model of Popup window when adding or editing a class -->
+    <div id="add" class="modal fade">  
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Create New Course</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Course Name</label>
+                            <div class="col-sm-8">
+                                <input id="name" name="name" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Category</label>
+                            <div class="col-sm-8">
+                                <select id="category" name="category" class="form-control">
+                                    <option value="">Select One/Empty String</option>
+                                    <option value="PROG">Programming/PROG</option>
+                                    <option value="DB">Database/DB</option>
+                                    <option value="WEB">Web Development/WEB</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Date Created</label>
+                            <div class="col-sm-8">
+                                <input id="dateCreated" name="dateCreated" type="input" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Description</label>
+                            <div class="col-sm-8">
+                                <textarea id="description" name="description" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-success" id="ok">Ok</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger" id="cancelAdd">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Study List</title>
+</head>
+<body>
+    <header></header>
+    <div> 
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Study Review</a>
+                </li>
+                <li>
+                    <a href="#">Study List</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+                <li>
+                    <a href="#">Feedback</a>
+                </li>
+                <li>
+                    <a href="#">Logout</a>
+                </li>
+                <li>
+                    <a href="#">Alice</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <header>
+            <h1>
+                Study List 
+                <a href="studyNew.html">New Study</a>
+            </h1>
+        </header>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Require Action</a>
+                </li>
+                <li>
+                    <a href="#">All Studies</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <table border="1px" cellspacing="0px"> 
+            <thead>
+                <tr>
+                    <th rowspan="2"><a href="#">ID</a></th>
+                    <th colspan="2">Date</th>
+                    <th rowspan="2"><a href="#">Title</a></th>
+                    <th rowspan="2"><a href="#">Principal</a></th>
+                    <th rowspan="2"><a href="#">Status</a></th>
+                    <th rowspan="2"><a href="#">Role</a></th>
+                    <th rowspan="2"><a href="#">Refresh</a></th>
+                </tr>
+                <tr>
+                    <th><a href="#">Submitted</a></th>
+                    <th><a href="#">Due</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input title="Filter by ID" name="id" id="id" type="text"/></td>
+                    <td><input title="Filter by Submitted date" name="submit" id="submit" type="date"/></td>
+                    <td><input title="Filter by due date" name="due" id="due" type="date"/></td>
+                    <td><input title="Filter by title" name="title" id="title" type="text"/></td>
+                    <td><input title="Filter by principal" name="principal" id="principal" type="text"/></td>
+                    <td>
+                        <select title="Filter by Status">
+                            <option value="done">Done</option>
+                            <option value="in-review">In Review</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select title="Filter by Role">
+                            <option value="nurse">Nurse</option>
+                            <option value="nutritionist">Nutritionist</option>
+                            <option value="investigator">Investigator</option>
+                            <option value="principal">Principal</option>
+                            <option value="lead">Lead</option>
+                        </select>
+                    </td>
+                    <td><a href="#" title="Clear all filters">Clear</a></td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>1/2/2015</td>
+                    <td>2/3/2015</td>
+                    <td>Title 123</td>
+                    <td>Alice</td>
+                    <td>Done</td>
+                    <td>Role 123</td>
+                    <td>
+                        <a href="#">i</a>
+                        <a href="#">x</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>234</td>
+                    <td>2/3/2015</td>
+                    <td>3/4/2015</td>
+                    <td>Title 234</td>
+                    <td>Bruce</td>
+                    <td>In Review</td>
+                    <td>Role 234</td>
+                    <td>
+                        <a href="#">i</a>
+                        <a href="#">x</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>345</td>
+                    <td>3/4/2015</td>
+                    <td>4/5/2015</td>
+                    <td>Title 345</td>
+                    <td>Charlie</td>
+                    <td>Cancelled</td>
+                    <td>Role 345</td>
+                    <td>
+                        <a href="#">i</a>
+                        <a href="#">x</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

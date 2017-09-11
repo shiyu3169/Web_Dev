@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>New Comment</title>
+</head>
+<body>
+    <header>
+        <h1>New Comment</h1>
+    </header>
+    <main>
+        <form id="new-comment" action="001-intro.html">
+            <div>
+                <label for="email-id">Email</label>
+                <div>
+                    <input placeholder="someone@somewhere.com" title="Please enter your email" type="email" name="email-field" id="email-id" required autofocus autocomplete="off"/>
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+            <div>
+                <label for="rating">Rating</label>
+                <div>
+                    <input title="Please rate" type="number" name="rating-field" id="rating" max="5" required autofocus autocomplete="off"/>
+                </div>
+            </div>
+            <div>
+                <label for="rating-progress">Rating Progress</label>
+                <div>
+                    <input title="Please rate" type="profress" name="rating-progress-field" id="rating-progress"" required autofocus autocomplete="off"/>
+                </div>
+            </div>
+            <div>
+                <label for="rating-slider">Rating Slider</label>
+                <div>
+                    <input title="Please rate" type="slider" name="rating-slider-field" id="rating-slider" required autofocus autocomplete="off"/>
+                </div>
+            </div>
+            <div>
+                <label for="date-posted">Date Posted</label>
+                <input type="date" name="date-posted" id="date" value="12/23/2015" />
+            </div>
+            <div>
+                <label for="time-posted">Time Posted</label>
+                <input type="time" name="time-posted" id="time" />
+            </div>
+            <div>
+                <label for="datetime-posted">Time Posted</label>
+                <input type="datetime" name="datetime-posted" id="datetime" />
+            </div>
+        </form>
+    </main>
+</body>
+</html>

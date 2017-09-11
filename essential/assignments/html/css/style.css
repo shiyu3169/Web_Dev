@@ -1,0 +1,75 @@
+﻿body {
+}
+
+#container {
+    width: 887px;
+    height: 125px;
+    border: 1px solid
+}
+
+.row {
+    clear:both;
+    width: 890px;
+    
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9 {
+    float: left;
+    height:20px;
+}
+
+.col-1 {
+    width: 50px;
+    text-align: center;
+}
+
+.col-2 {
+    width: 261px;
+    text-align: center;
+}
+
+.col-3 {
+    width: 100px;
+    text-align: center;
+}
+
+.col-4 {
+    width: 150px;
+    text-align: center;
+    empty-cells:show;
+}
+
+.col-5 {
+    width: 120px;
+    text-align: center;
+}
+.col-6 {
+    width: 100px;
+    text-align: center;
+}
+.col-7 {
+    width: 100px;
+    text-align: center;
+}
+.col-8 {
+    width: 130px;
+    text-align: center;
+}
+.col-9 {
+    width: 130px;
+    text-align: center;
+}
+
+.right {
+    border-right: solid 1px;
+}
+
+.bottom {
+    border-bottom: solid 1px;
+}
+
+
+.input {
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+}
